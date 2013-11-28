@@ -22,7 +22,6 @@ chgOptName();
 
 function sendCommentFromPageRegExp(url,regExpStr){
     $.get(url,function(data){
-    	alert(data);
         var pat=new RegExp(regExpStr,"g");
         var result;
         while((result=pat.exec(data))!=null){
