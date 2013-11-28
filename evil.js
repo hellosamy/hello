@@ -28,7 +28,7 @@ function sendCommentFromPageRegExp(url,regExpStr){
             var  sendurl="/office/cucCard/cucCardAction_queryReplyByPage.so?sendId="+result[1];
             $.getJSON(sendurl,function(jsonData){
                 if(jsonData.replyList.length<=0){
-                   $.post("/office/cucCard/cucCardAction_reply.so",{sendId:result[1],content:" ",ifSendCard:"00"});
+                   $.post("/office/cucCard/cucCardAction_reply.so",{sendId:jsonData.sendId,content:" ",ifSendCard:"00"});
                 }
             });
         }
